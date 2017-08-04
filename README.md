@@ -1,10 +1,10 @@
-# Unifi USG Configuration for kpn
+# Ubiquity Unifi Seurity Gateway (USG) Configuration for KPN
 
 ## Introduction
-At home I have KPN as provider for Internet, IP TV and Voip services. The services are provided through fiber (FTTH). I recently tossed and sold all disperse hardware and bought Ubiquiti gear to upgrade, speedup and simply my home network.
+At home I have KPN as provider for Internet, IPTV and Voip services. The services are provided through fiber (FTTH). I recently tossed and sold all disperse hardware and bought Ubiquiti gear to upgrade, speedup and simply my home network.
 This guide provides the information and guidance needed to configure the Ubiquiti Unifi Security Gateway (https://www.ubnt.com/unifi-routing/usg/) to support both Internet and IP TV.
 
-There are a lot of usefull posts out there, this one is a composition of those articles and seems to work. See "Background reading / alternative sources" if you're looking for alternatives or background reading.
+There are a lot of usefull posts out there, this one is a composition of those articles and seems to work. See "Background reading / alternative sources".
 
 ## Design considerations
 * **Simplicity**: I'd like my network to be as simple as possible, in hardware, software and configuration.
@@ -46,7 +46,13 @@ There are a lot of usefull posts out there, this one is a composition of those a
                                           - Unifi controller
 ```
 
-Further notes:
+## Hardware
+* [Ubiquity Unifi Security Gateway](https://www.ubnt.com/unifi-routing/usg/) - Enterprise Gateway Router with Gigabit Ethernet - model: USG
+* [Ubiquity Unifi AP AC LR](https://www.ubnt.com/unifi/unifi-ap-ac-lr/) - 802.11ac Long Range Access Point - model: UAP‑AC‑LR.
+* [Ubiquity Unifi AP AC Pro](https://www.ubnt.com/unifi/unifi-ap-ac-pro/) - 802.11ac PRO Access Point - model: UAP‑AC‑PRO.y Managed Gigabit Switch - model: US‑8‑60W
+* [Ubiquity Unifi Controller](https://www.ubnt.com/software/#) - Centralized management software for the Ubiquity Unifi family (running inside a docker container on a Synology Diskstation).
+
+## Further notes:
 * Voip services are expluded in this configuration (I'm not using them). Read the links below if you're interested in setting this up. Basically you'll bridge VLAN 7 to USG LAN2 and connect the Experiabox.
 * The Ubiquity Unifi controller is running in a Docker container on a Synology NAS (having a static IP address).
 * Configuration is focussed on IPV4. I don't bother setting up and securing IPV6.

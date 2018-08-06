@@ -1,4 +1,7 @@
 {
+        "firewall": {
+                "source-validation": "disable"
+        },
         "interfaces": {
                 "ethernet": {
                         "eth0": {

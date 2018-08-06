@@ -5,7 +5,7 @@
         "interfaces": {
                 "ethernet": {
                         "eth0": {
-                                "description": "eth0 - FTTH",
+                                "description": "WAN",
                                 "duplex": "auto",
                                 "speed": "auto",
                                 "vif": {

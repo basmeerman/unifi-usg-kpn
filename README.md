@@ -4,7 +4,7 @@
 At home I have KPN as provider for Internet, IPTV and Voip services. The services are provided through fiber (FTTH). I recently tossed and sold all disperse hardware and bought Ubiquiti gear to upgrade, speedup and simply my home network.
 This guide provides the information and guidance needed to configure the Ubiquiti Unifi Security Gateway (https://www.ubnt.com/unifi-routing/usg/) to support both Internet and IPTV.
 
-There are a lot of usefull posts out there, this one is a composition of those articles and seems to work. See "Background reading / alternative sources".
+There are a lot of useful posts out there, this one is a composition of those articles and seems to work. See "Background reading / alternative sources".
 
 ## Design considerations
 * **Simplicity**: I'd like my network to be as simple as possible, in hardware, software and configuration.
@@ -50,20 +50,20 @@ There are a lot of usefull posts out there, this one is a composition of those a
 * [Ubiquity Unifi Security Gateway](https://www.ubnt.com/unifi-routing/usg/) - Enterprise Gateway Router with Gigabit Ethernet - model: USG
 * [Ubiquity Unifi AP AC LR](https://www.ubnt.com/unifi/unifi-ap-ac-lr/) - 802.11ac Long Range Access Point - model: UAP‑AC‑LR.
 * [Ubiquity Unifi AP AC Pro](https://www.ubnt.com/unifi/unifi-ap-ac-pro/) - 802.11ac PRO Access Point - model: UAP‑AC‑PRO.y Managed Gigabit Switch - model: US‑8‑60W
-* [Ubiquity Unifi Controller](https://www.ubnt.com/software/#) - Centralized management software for the Ubiquity Unifi family (running inside a docker container on a Synology Diskstation).
+* [Ubiquity Unifi Controller](https://www.ubnt.com/software/) - Centralized management software for the Ubiquity Unifi family (running inside a docker container on a Synology Diskstation).
 
 ## Further notes:
-* Voip services are expluded in this configuration (I'm not using them). Read the links below if you're interested in setting this up. Basically you'll bridge VLAN 7 to USG LAN2 and connect the Experiabox.
+* Voip services are excluded in this configuration (I'm not using them). Read the links below if you're interested in setting this up. Basically you'll bridge VLAN 7 to USG LAN2 and connect the Experiabox.
 * The Ubiquity Unifi controller is running in a Docker container on a Synology NAS (having a static IP address).
-* Configuration is focussed on IPV4. I don't bother setting up and securing IPV6.
+* Configuration is focused on IPV4. I don't bother setting up and securing IPV6.
 * This configuration guide references commands to be issued on multiple devices **USG** or the **Unifi Controller**. Always make sure you're connected to the right device.
 * When connected to **USG**, you're connected to EdgeOS. Double pressing *tab* will give you an overview of commands.
 
 ## Prerequisites
 1. To support routed IPTV make sure you're using a (managed) switch supporting IGMP snooping
-2.  Have a Ubiquity Unifi Controller running. If not, see: https://miketabor.com/running-ubiquiti-unifi-controller-in-docker-on-synology-nas/
+2. Have a Ubiquity Unifi Controller running. If not, see: https://miketabor.com/running-ubiquiti-unifi-controller-in-docker-on-synology-nas/
 3. Adopt, provision and upgrade your USG.
-4.  Configure you're internal LAN setup (IP range(s) / DHCP / AP's / etc.).
+4. Configure you're internal LAN setup (IP range(s) / DHCP / AP's / etc.).
 5. Connect the USG WAN port (eth0) to the FTTP NTU of KPN.
 6. Connect the USG LAN1 port (eth1) to the Managed Switch
 
@@ -75,7 +75,7 @@ There are a lot of usefull posts out there, this one is a composition of those a
 3. Type:  `pppoe`
 4. Check the checkbox `VLAN`, enter the value `6`
 5. Set the username to: Past the MAC address AND replace the semicolons (":") with dashes ("-") AND postfix it with `@internet`. The format should look like: `xx-xx-xx-xx-xx-xx@internet`.
-6. Set the passwork to: `kpn`.
+6. Set the password to: `kpn`.
 7. Click: *Queue change*.
 8. Go to: *Device Management* and click *Force provision*
 
@@ -93,7 +93,7 @@ Notes:
 Let's get started.
 
 Pull the `config.gateway.json`  from the repo and change the following:
-1. Replace the MAC address placeholders `xx-xx-xx-xx-xx-xx` with the real MAC address of the USG (see *Setup basic Internet, step 2*).
+1. Replace the MAC address placeholder `xx-xx-xx-xx-xx-xx` with the real MAC address of the USG (see *Setup basic Internet, step 2*).
 2. Adjust the IP ranges / DHCP ranges to you're liking (currently `192.168.100.1/24`) but they can be any range as long as they do not overlap public IP spaces (duh) and the IPTV ranges KPN uses.
 3. Save the file (using UNIX file format)
 4. (optional) Use an online JSON validator to check of you have created / not corrupted the JSON file.

@@ -127,6 +127,7 @@ The routed IP network sometimes changes, therefore the next-hop settings for rou
 4. `SSH` into the **USG**
 5. Move the file: `mv update_iptv_route.sh /config/scripts/post-config.d/`
 6. Make the file executable `chmod +x /config/scripts/post-config.d/update_iptv_route.sh`
+7. Execute the script ./update_iptv_route.sh
 
 ### 5. Celebrate!.
 Wait for it.... you're done. The Internet and IPTV should be working. Test you're IPTV by rebooting the decoders and see if they come back online. If not... read below.

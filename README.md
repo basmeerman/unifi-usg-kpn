@@ -1,7 +1,7 @@
 # Ubiquity Unifi Security Gateway (USG) Configuration for KPN
 
 ## Introduction
-At home I have KPN as provider for Internet, IPTV and Voip services. The services are provided through fiber (FTTH). I recently tossed and sold all disperse hardware and bought Ubiquiti gear to upgrade, speedup and simply my home network.
+At home I have KPN as provider for Internet, IPTV and Voip services. The services are provided through fiber (FTTH). I recently tossed and sold all disperse hardware and bought Ubiquiti gear to upgrade, speedup and simplify my home network.
 This guide provides the information and guidance needed to configure the Ubiquiti Unifi Security Gateway (https://www.ubnt.com/unifi-routing/usg/) to support both Internet and IPTV.
 
 There are a lot of useful posts out there, this one is a composition of those articles and seems to work. See "Background reading / alternative sources".

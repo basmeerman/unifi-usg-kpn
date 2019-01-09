@@ -204,3 +204,5 @@ Determining cause and solutions:
     Also defining entire firewall ruleset - without access groups - my main source for this adjusted configuration)<br/> https://www.byluke.nl/tutorial/ubiquiti-usg-werkend-krijgen-kpn-glasvezel/
 * Auto-update next hop on IPTV routing:<br/> http://www.pimwiddershoven.nl/entry/kpn-routed-iptv-on-an-ubiquiti-edgerouter-lite-lessons-learned-part-2
 * Lessons learned containing Troubleshooting tips for things I didn't run into, but any reader might.<br/> http://www.pimwiddershoven.nl/entry/kpn-router-iptv-on-an-ubiquiti-edgerouter-lite-lessons-learned
+* As per hint by @Slootjes https://free2wifi.nl/2018/09/25/ubnt-usg-iptv/ 
+

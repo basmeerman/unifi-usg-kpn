@@ -1,11 +1,8 @@
 {
-        "firewall": {
-                "source-validation": "disable"
-        },
         "interfaces": {
                 "ethernet": {
                         "eth0": {
-                                "description": "WAN",
+                                "description": "eth0 - FTTH",
                                 "duplex": "auto",
                                 "speed": "auto",
                                 "vif": {
@@ -23,6 +20,9 @@
                                                         "default-route-distance": "210",
                                                         "name-server": "update"
                                                 }
+                                                ,"ip": {
+                                                        "source-validation": "loose"
+                                                    }
                                         },
                                         "6": {
                                                 "description": "eth0.6 - Internet",
@@ -39,7 +39,7 @@
                                                 },
                                                 "pppoe": {
                                                         "2": {
-                                                                "default-route": "none",
+                                                                "default-route": "auto",
                                                                 "firewall": {
                                                                         "in": {
                                                                                 "name": "WAN_IN"
@@ -91,7 +91,12 @@
         },
         "protocols": {
                 "igmp-proxy": {
+                    "disable-quickleave": "''",
                     "interface": {
+                        "eth0": {
+                          "role": "disabled",
+                          "threshold": "1"
+                        },
                         "eth0.4": {
                             "alt-subnet": [
                                 "0.0.0.0/0"
@@ -100,11 +105,15 @@
                             "threshold": "1"
                         },
                         "eth1": {
-                            "alt-subnet": [
-                                "0.0.0.0/0"
-                            ],
-                            "role": "downstream",
-                            "threshold": "1"
+                          "alt-subnet": [
+                              "0.0.0.0/0"
+                          ],
+                          "role": "downstream",
+                          "threshold": "1"
+                        },
+                         "pppoe2": {
+                          "role": "disabled",
+                          "threshold": "1"
                         }
                     }
                 },

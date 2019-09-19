@@ -10,7 +10,7 @@ There are a lot of useful posts out there, this one is a composition of those ar
 * **Simplicity**: I'd like my network to be as simple as possible, in hardware, software and configuration.
 * **Forward compatibility**: Keep as much configuration in the USG configured as per controller to increase and maintain forward compatibility with upgrades. The USG comes with a default firewall configuration and routing options that allow you for guest network isolation etc. I'd like to adopt future advancements.
 * **Automated updates**: Automate the updates of the routing as the IPTV network changes.
-* **Custom IP Range**: Keep the internal networking ranges as they were (192.169.100.1/24).
+* **Custom IP Range**: Keep the internal networking ranges as they were (192.168.100.1/24).
 
 ## Global design
 ```

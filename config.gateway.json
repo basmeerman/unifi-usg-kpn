@@ -144,6 +144,18 @@
                 ],
                 "wan-interface": "pppoe2"
         },
+        "system": {
+                "task-scheduler": {
+                        "task": {
+                                "iptv": {
+                                        "executable": {
+                                                "path": "/config/scripts/post-config.d/update_iptv_route.sh"
+                                        },
+                                        "interval": "15m"
+                                }
+                        }
+                }
+        },
         "service": {
                 "nat": {
                         "rule": {
